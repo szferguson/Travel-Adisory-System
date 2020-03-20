@@ -21,9 +21,6 @@ def login():
         # flash('Login requested for user {}'.format(form.email.data))
         username = form.email.data
         password = form.password.data
-        # print(username)
-        # print(form.password.data)
-
         for user in db.mycollection.find():
             for u, p in user.items():
                 if username == u:
