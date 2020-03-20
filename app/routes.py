@@ -21,13 +21,15 @@ def login():
         # flash('Login requested for user {}'.format(form.email.data))
         username = form.email.data
         password = form.password.data
-        print(username)
-        print(form.password.data)
+        # print(username)
+        # print(form.password.data)
 
         for user in db.mycollection.find():
             for u, p in user.items():
-                if username == u and db.hashGenerator(password) == p:
-                    print("We found a match")
-                    return redirect(url_for('index'))
+                if username == u:
+                    if db.hashGenerator(password) == p:
+                        return redirect(url_for('index'))
+                    else:
+                        flash("Username and password pair didn't match")
 
     return render_template('login.html', form=form)

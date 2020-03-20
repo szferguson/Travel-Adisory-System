@@ -27,4 +27,4 @@ userProfiles = [
 ]
 
 # you should comment this line out after you run the program ONCE
-x = mycollection.insert_many(userProfiles)
+# x = mycollection.insert_many(userProfiles)

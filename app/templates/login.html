@@ -10,26 +10,7 @@
             <div class="text-center text-muted mb-4">
               <small>Sign in with credentials</small>
 
-              <!-- MESSAGES HERE -->
-              {% with messages = get_flashed_messages() %}
-              {% if messages %}
-              <ul>
-                  {% for message in messages %}
-                  <li>{{ message }}</li>
-                  {% endfor %}
-              </ul>
-              {% endif %}
-              {% endwith %}
-              <!-- MESSAGES HERE -->
-
-              <!-- ERRORS HERE -->
-              {% for error in form.password.errors %}
-              <div style="margin-top: 10px;" class="alert alert-default" role="alert">
-              {{error}}
-              </div>
-
-              {% endfor %}
-              <!-- ERRORS HERE -->
+             
 
             </div>
             <form action="" method="post" novalidate>
