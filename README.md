@@ -4,7 +4,12 @@
 
 ### Required libraries:
 - flask
-- flask_wtf
+- flask-WTF
+- flask-migrate
+- flask-login
+- Flask-SQLAlchemy
+- Cryptography
+- NumPy
 
 ### How to run:
 ```
